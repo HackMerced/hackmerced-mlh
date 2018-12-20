@@ -38,9 +38,10 @@
       <h1>HackMerced</h1>
       <p class="subtitle">March 1st - 3rd</p>
       <div class="sign-up-form w-form">
-        <form name="wf-form-signup-form" data-name="Signup Form" class="w-clearfix"><input type="email" name="email"
-            data-name="Email" placeholder="Enter your email address" maxlength="256" required="" class="field w-input"><input
-            type="submit" value="Get Notified" data-wait="Please wait..." class="button w-button"></form>
+        <form name="wf-form-signup-form" data-name="Signup Form" class="w-clearfix" method="post"  action="/addemail">
+          <input type="email" name="email" data-name="Email" placeholder="Enter your email address" maxlength="256" required="" class="field w-input">
+          <input type="submit" value="Get Notified" data-wait="Please wait..." class="button w-button">
+        </form>
         <div class="success-message w-form-done">
           <p>Awesome! You have been added to our list. </p>
         </div>
