@@ -289,5 +289,9 @@ p {
   .align-right {
     text-align: center;
   }
+
+  #mlh-trust-badge {
+    display: none !important;
+  }
 }
 
