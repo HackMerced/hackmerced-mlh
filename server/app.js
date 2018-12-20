@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var port = 3000;
 var Email = require("./models/email");
-
+const path = require("path");
 // Body-parser middleware to convert data to JSON
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -10,9 +10,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 require("./config/db");
 
+const reqPath = path.join(__dirname, "../");
+
 // Listens to requests from browser
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(reqPath + "/client/build/index.html");
 });
 
 app.post("/addemail", (req, res) => {
