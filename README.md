@@ -1,2 +1,2 @@
 # hackmerced-mlh
-Pre-registeration site
+Pre-registration site
