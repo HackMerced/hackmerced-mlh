@@ -17,7 +17,3 @@ mongoose.connect(url, options).then(
     console.log("Error connecting Database instance due to: ", err);
   }
 );
-
-// require any models
-
-// require("../models/email");

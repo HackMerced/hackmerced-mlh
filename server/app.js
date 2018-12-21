@@ -13,10 +13,6 @@ require("./config/db");
 const reqPath = path.join(__dirname, "..");
 app.use(express.static(reqPath + '/client/build'));
 
-// app.get('/', function(req, res, next) {
-//   res.sendFile(reqPath + '/client/build/index.html');
-// });
-
 app.post("/addemail", (req, res, next) => {
   var myData = new Email(req.body);
   myData.save()
