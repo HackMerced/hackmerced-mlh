@@ -11,13 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 require("./config/db");
 
 const reqPath = path.join(__dirname, "..");
-app.use('/css', express.static(reqPath + '/client/build/css'));
-app.use('/images', express.static(reqPath + '/client/build/images'));
-app.use('/js', express.static(reqPath + '/client/build/js'));
-
-app.get('/', function(req, res) {
-    res.sendFile(reqPath + '/client/build/index.html');
-});
+app.use(express.static(reqPath + '/client/build/'));
 
 app.post("/addemail", (req, res, next) => {
   var myData = new Email(req.body);
@@ -28,6 +22,7 @@ app.post("/addemail", (req, res, next) => {
    .catch(err => {
      console.error(err);
    })
+   res.redirect('back');
 });
 
 // Starts the server and tells it to listen on port 3000
