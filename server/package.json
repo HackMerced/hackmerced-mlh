@@ -1,8 +1,8 @@
 {
-  "name": "node-express-mongo",
-  "version": "1.0.0",
+  "name": "HackMerced IV Backend",
+  "version": "1.1.0",
   "description": "Node demo with MongoDB",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,7 @@
     "mongoose",
     "demo"
   ],
-  "author": "Charles Tolentino",
+  "author": "HackMerced",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -21,7 +21,6 @@
     "mongodb": "^3.1.4",
     "mongoose": "^5.2.14",
     "nodemon": "^1.18.9",
-    "react": "^16.5.2",
-    "validator": "^10.9.0"
+    "validator": "^10.9.0" // why do we have this?
   }
 }
