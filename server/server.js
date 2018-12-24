@@ -20,13 +20,11 @@ app.post("/addemail", (req, res) => {
   myData.save()
   .then(doc => {
      console.log(doc);
-     res.send("item saved to database");
    })
    .catch(err => {
      console.error(err);
-     res.status(400).send("unable to save to database");
    })
-   // res.redirect('back');
+   // res.redirect('/');
 });
 
 // Starts the server and tells it to listen on port 3000
