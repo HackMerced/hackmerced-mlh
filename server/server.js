@@ -10,19 +10,23 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 require("./config/db");
 
-const reqPath = path.join(__dirname, "..");
-app.use(express.static(reqPath + '/client/build/'));
+const application = path.join(__dirname, "/../client/build");
+app.use(express.static(application));
 
-app.post("/addemail", (req, res, next) => {
+console.log(application);
+
+app.post("/addemail", (req, res) => {
   var myData = new Email(req.body);
   myData.save()
   .then(doc => {
      console.log(doc);
+     res.send("item saved to database");
    })
    .catch(err => {
      console.error(err);
+     res.status(400).send("unable to save to database");
    })
-   res.redirect('back');
+   // res.redirect('back');
 });
 
 // Starts the server and tells it to listen on port 3000
