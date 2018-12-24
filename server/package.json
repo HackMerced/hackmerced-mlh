@@ -21,6 +21,6 @@
     "mongodb": "^3.1.4",
     "mongoose": "^5.2.14",
     "nodemon": "^1.18.9",
-    "validator": "^10.9.0" // why do we have this?
+    "validator": "^10.9.0" 
   }
 }
