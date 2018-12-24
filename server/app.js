@@ -10,12 +10,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 require("./config/db");
 
-const reqPath = path.join(__dirname, "../");
+const application = path.join(__dirname, "/../client/build/index.html");
 
-// Listens to requests from browser
-app.get("/", (req, res) => {
-  res.sendFile(reqPath + "/client/build/index.html");
-});
+app.use(express.static(application));
+console.log(application);
 
 app.post("/addemail", (req, res) => {
   var myData = new Email(req.body);
