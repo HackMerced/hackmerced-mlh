@@ -2,4 +2,4 @@ node_modules/
 server/secrets.js
 .DS_Store
 package-lock.json
-yarn-lock.json
+yarn.lock
