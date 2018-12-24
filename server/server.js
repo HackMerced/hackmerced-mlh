@@ -24,8 +24,8 @@ app.post("/addemail", (req, res) => {
    .catch(err => {
      console.error(err);
    })
-   // res.redirect('/');
-});
+   res.send('done');
+ });
 
 // Starts the server and tells it to listen on port 3000
 app.listen(port, () => {
