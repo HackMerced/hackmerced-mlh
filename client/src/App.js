@@ -24,7 +24,8 @@ class App extends Component {
   onTextboxChangeSignUpEmail(event) {
     this.setState({
       signUpEmail: event.target.value,
-      signedUp: false
+      signedUp: false,
+      entered: false
     });
   }
 
