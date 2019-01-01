@@ -147,20 +147,25 @@ p {
 }
 
 .success-message {
-  padding: 29px;
+  padding: 50px;
   border-radius: 4px;
-  background-color: #c96c47;
+  background-color: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .3), 0 0 0 1px rgba(0, 0, 0, .14), inset 0 0 0 1px hsla(0, 0%, 100%, .09), inset 0 1px 0 0 hsla(0, 0%, 100%, .12);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: #000;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .56);
+}
+
+.error-message {
+  padding: 50px;
+  border-radius: 4px;
+  background-color: #5c3245;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .3), 0 0 0 1px rgba(0, 0, 0, .14), inset 0 0 0 1px hsla(0, 0%, 100%, .09), inset 0 1px 0 0 hsla(0, 0%, 100%, .12);
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   color: #fff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, .56);
-}
-
-.error-message {
-  padding-bottom: 5px;
-  border-radius: 2px;
-  background-color: #5c3245;
 }
 
 .header-section {
@@ -173,7 +178,6 @@ p {
   background-size: cover;
   color: #fff;
   text-align: center;
-  z-index: 100px;
 }
 
 .footer-section {
@@ -305,4 +309,29 @@ p {
   /* #mlh-trust-badge {
     display: none !important;
   } */
+}
+
+.none {
+  display: none !important;
+}
+
+.fadeIn
+{
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn
+{
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

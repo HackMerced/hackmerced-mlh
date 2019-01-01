@@ -6,17 +6,25 @@ class App extends Component {
     super(props);
 
     this.state = {
-      signUpError: '',
+      signUpMsg: '',
       signUpEmail: '',
+      signedUp: false,
+      entered: false
     };
 
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.onTextboxChangeSignUpEmail = this.onTextboxChangeSignUpEmail.bind(this);
     this.onSignUp = this.onSignUp.bind(this);
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
   }
 
   onTextboxChangeSignUpEmail(event) {
     this.setState({
       signUpEmail: event.target.value,
+      signedUp: false
     });
   }
 
@@ -38,20 +46,28 @@ class App extends Component {
     }).then(res => res.json())
       .then(json => {
         console.log('json',json);
+
         if (json.success) {
           this.setState({
-            signUpError: json.message,
-            signUpEmail: '',
-          });
-        } else {
-          this.setState({
-            signUpError: json.message,
+            signUpEmail: ''
           });
         }
+
+        this.setState({
+          signUpMsg: json.message,
+          signedUp: json.success,
+          entered: true
+        });
+
       });
   }
 
   render() {
+    const {
+      signUpEmail,
+      signUpMsg
+    } = this.state;
+
     return (
       <div className="App">
         <body className="body">
@@ -60,11 +76,27 @@ class App extends Component {
               <h1>HackMerced</h1>
               <p className="subtitle">March 1st - 3rd @ UC Merced</p>
               <div className="sign-up-form w-form">
-                <form name="wf-form-signup-form" data-name="Signup Form" className="w-clearfix" method="post" action="/addemail">
+                <form name="wf-form-signup-form" data-name="Signup Form" className="w-clearfix" onSubmit={this.handleSubmit}>
                   <p className="prompt">Join our mailing list!</p>
-                  <input type="email" name="email" data-name="Email" placeholder="Enter your email address" maxlength="256" required="" className="field w-input" />
-                  <input type="submit" value="Get Notified" data-wait="Please wait..." className="button w-button" />
+                  <input
+                    type="email"
+                    name="email"
+                    data-name="Email"
+                    placeholder="Enter your email address"
+                    maxlength="256"
+                    value={signUpEmail}
+                    onChange={this.onTextboxChangeSignUpEmail}
+                    className="field w-input"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    onClick={this.onSignUp}
+                    className="button w-button">
+                    Get Notified
+                  </button>
                 </form>
+                <p className={(this.state.signedUp) ? 'success-message fadeIn' : 'none'}>{signUpMsg}</p>
               </div>
             </div>
           </div>
