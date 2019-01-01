@@ -1,20 +1,15 @@
 .App {
-    height: 100%;
-    width: 100%;
-}
+    background-color: #5DADE2;
+    font-family: 'Varela Round', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    background-image: url('../images/ucmerced.png');
 
-body {
-  background-color: #5DADE2;
-  font-family: 'Varela Round', sans-serif;
-  color: #fff;
-  font-size: 14px;
-  line-height: 20px;
-  background-image: url('../images/ucmerced.png');
-
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1 {
@@ -181,11 +176,20 @@ p {
 }
 
 .footer-section {
-  padding-top: 11px;
-  padding-bottom: 34px;
-  background-color: #2f292b;
-  box-shadow: 0 -1px 0 0 hsla(0, 0%, 100%, .08), inset 0 1px 1px 0 rgba(0, 0, 0, .24);
-  color: #fff;
+  /* padding-top: 11px;
+  padding-bottom: 34px; */
+  /* box-shadow: 0 -1px 0 0 hsla(0, 0%, 100%, .08), inset 0 1px 1px 0 rgba(0, 0, 0, .24); */
+  color: #000;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  /* background-color: #efefef; */
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .copyright {

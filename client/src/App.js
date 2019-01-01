@@ -71,7 +71,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <body className="body">
+        <div className="body">
           <div className="header-section">
             <div className="container w-container">
               <h1>HackMerced</h1>
@@ -84,7 +84,7 @@ class App extends Component {
                     name="email"
                     data-name="Email"
                     placeholder="Enter your email address"
-                    maxlength="256"
+                    maxLength="256"
                     value={signUpEmail}
                     onChange={this.onTextboxChangeSignUpEmail}
                     className="field w-input"
@@ -112,7 +112,11 @@ class App extends Component {
             <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-black.svg" alt="Major League Hacking 2019 Hackathon Season"
             style={{width:"100%"}} className="mlh-badge" />
           </a>
-        </body>
+
+          <div className="footer-section">
+            <strong>Interested in sponsoring us? Email us at <a href="mailto:hello@hackmerced.com" style={{textDecoration: "none"}}>hello@hackmerced.com</a></strong>
+          </div>
+        </div>
       </div>
     );
   }
