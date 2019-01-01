@@ -28,13 +28,13 @@ app.post('/api/account/signup', (req, res, next) => {
    .catch(err => {
      console.error(err);
      // if email exists
-     if(err.name.toString() == "MongoError") {
+     if(err.name.toString() == 'MongoError') {
        return res.send({
          success: false,
          message: "This email is already signed up!"
        });
      // if entered email is not valid
-     } else if(err.name.toString() == "ValidatorError") {
+   } else if(err._message.toString() == 'Email validation failed') {
        return res.send({
          success: false,
          message: "This email is not a valid email."

@@ -96,7 +96,11 @@ class App extends Component {
                     Get Notified
                   </button>
                 </form>
-                <p className={(this.state.signedUp) ? 'success-message fadeIn' : 'none'}>{signUpMsg}</p>
+                <p className={!(this.state.entered) ? 'none' :
+                  (this.state.signedUp) ? 'success-message fadeIn' : 'error-message fadeIn'}
+                  >
+                  {signUpMsg}
+                  </p>
               </div>
             </div>
           </div>
