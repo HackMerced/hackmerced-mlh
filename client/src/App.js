@@ -114,7 +114,7 @@ class App extends Component {
           </a>
 
           <div className="footer-section">
-            <strong>Interested in sponsoring us? Email us at <a href="mailto:hello@hackmerced.com" style={{textDecoration: "none"}}>hello@hackmerced.com</a></strong>
+            <strong>Interested in sponsoring us? Email us at <a href="mailto:sponsorship@hackmerced.com" style={{textDecoration: "none"}}>sponsorship@hackmerced.com</a></strong>
           </div>
         </div>
       </div>
