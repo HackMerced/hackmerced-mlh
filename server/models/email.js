@@ -1,9 +1,7 @@
-// MongoDB, by default, runs on port 27017
-var mongoose = require("mongoose");
+let mongoose = require('mongoose')
 let validator = require('validator')
 
-// Format for data
-var nameSchema = new mongoose.Schema({
+let emailSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
@@ -13,6 +11,5 @@ var nameSchema = new mongoose.Schema({
       return validator.isEmail(value)
     }
   }
-});
-
-module.exports = mongoose.model("Email", nameSchema);
+})
+module.exports = mongoose.model('Email', emailSchema)

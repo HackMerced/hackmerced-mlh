@@ -1,9 +1,15 @@
-body {
-  background-color: #2f292b;
-  font-family: 'Varela Round', sans-serif;
-  color: #fff;
-  font-size: 14px;
-  line-height: 20px;
+.App {
+    background-color: #5DADE2;
+    font-family: 'Varela Round', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    background-image: url('../images/ucmerced.png');
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1 {
@@ -13,7 +19,7 @@ h1 {
   line-height: 54px;
   font-weight: 500;
   letter-spacing: 1px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .73), 0 2px 4px rgba(0, 0, 0, .19);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .84), 0 2px 4px rgba(0, 0, 0, .45);
 }
 
 h2 {
@@ -69,7 +75,7 @@ p {
   padding: 4px 29px;
   float: left;
   border-radius: 4px;
-  background-color: #c96c47;
+  background-color: #1ABC9C;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .3), 0 0 0 1px rgba(0, 0, 0, .11), inset 0 0 0 1px hsla(0, 0%, 100%, .08), inset 0 1px 0 0 hsla(0, 0%, 100%, .16), inset 0 -44px 38px -25px rgba(0, 0, 0, .09);
   -webkit-transition: background-color 300ms ease;
   transition: background-color 300ms ease;
@@ -82,7 +88,7 @@ p {
 }
 
 .button:hover {
-  background-color: #e66f40;
+  background-color: #48C9B0;
 }
 
 .button:active {
@@ -90,10 +96,10 @@ p {
   box-shadow: 0 1px 0 0 hsla(0, 0%, 100%, .26), 0 0 0 1px rgba(0, 0, 0, .16), inset 0 2px 6px 1px rgba(0, 0, 0, .11), inset 0 1px 0 0 rgba(0, 0, 0, .2), inset 0 44px 38px -25px rgba(0, 0, 0, .13);
 }
 
-.subtitle {
+.subtitle, .prompt {
   font-size: 25px;
   line-height: 34px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, .24), 0 1px 0 rgba(0, 0, 0, .25);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .84), 0 1px 0 rgba(0, 0, 0, .45);
 }
 
 .field {
@@ -103,7 +109,7 @@ p {
   float: left;
   border: 0px solid #000;
   border-radius: 4px;
-  background-color: rgba(47, 41, 43, .57);
+  background-color: rgba(47, 41, 43, .76);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .31), inset 0 2px 9px -1px rgba(0, 0, 0, .14), 0 0 0 1px hsla(0, 0%, 100%, .09), 0 1px 0 0 hsla(0, 0%, 100%, .13);
   -webkit-transition: background-color 300ms ease, box-shadow 300ms ease;
   transition: background-color 300ms ease, box-shadow 300ms ease;
@@ -112,7 +118,7 @@ p {
 }
 
 .field:hover {
-  background-color: rgba(47, 41, 43, .76);
+  background-color: rgba(47, 41, 43, .90);
 }
 
 .field:focus {
@@ -120,7 +126,7 @@ p {
 }
 
 .sign-up-form {
-  margin-top: 47px;
+  margin-top: 80px;
 }
 
 .social-widget {
@@ -136,9 +142,20 @@ p {
 }
 
 .success-message {
-  padding: 29px;
+  padding: 50px;
   border-radius: 4px;
-  background-color: #c96c47;
+  background-color: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .3), 0 0 0 1px rgba(0, 0, 0, .14), inset 0 0 0 1px hsla(0, 0%, 100%, .09), inset 0 1px 0 0 hsla(0, 0%, 100%, .12);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: #000;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .56);
+}
+
+.error-message {
+  padding: 50px;
+  border-radius: 4px;
+  background-color: #5c3245;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .3), 0 0 0 1px rgba(0, 0, 0, .14), inset 0 0 0 1px hsla(0, 0%, 100%, .09), inset 0 1px 0 0 hsla(0, 0%, 100%, .12);
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
@@ -146,31 +163,33 @@ p {
   text-shadow: 0 1px 0 rgba(0, 0, 0, .56);
 }
 
-.error-message {
-  padding-bottom: 5px;
-  border-radius: 2px;
-  background-color: #5c3245;
-}
-
 .header-section {
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100%;
   padding-top: 193px;
-  padding-bottom: 286px;
-  background-color: #25dfe7;
-  background-image: url('../images/ucmerced.png');
-  background-position: 50% 0px;
+  min-height: 100vh;
+  background-color: transparent;
+  background-position: center;
   background-size: cover;
   color: #fff;
   text-align: center;
 }
 
 .footer-section {
-  padding-top: 11px;
-  padding-bottom: 34px;
-  background-color: #2f292b;
-  box-shadow: 0 -1px 0 0 hsla(0, 0%, 100%, .08), inset 0 1px 1px 0 rgba(0, 0, 0, .24);
-  color: #fff;
+  /* padding-top: 11px;
+  padding-bottom: 34px; */
+  /* box-shadow: 0 -1px 0 0 hsla(0, 0%, 100%, .08), inset 0 1px 1px 0 rgba(0, 0, 0, .24); */
+  color: #000;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  /* background-color: #efefef; */
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .copyright {
@@ -251,11 +270,13 @@ p {
 }
 
 @media (max-width: 767px) {
+  h1 {
+    font-size: 45px;
+  }
   .sign-up-form {
     margin-bottom: 0px;
   }
   .header-section {
-    padding-top: 55px;
     padding-bottom: 75px;
   }
   .footer-section {
@@ -289,9 +310,32 @@ p {
   .align-right {
     text-align: center;
   }
-
-  #mlh-trust-badge {
+  /* #mlh-trust-badge {
     display: none !important;
-  }
+  } */
 }
 
+.none {
+  display: none !important;
+}
+
+.fadeIn
+{
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn
+{
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
