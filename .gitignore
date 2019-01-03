@@ -1,3 +1,20 @@
+# node_modules
 node_modules/
+client/node_modules/
+server/node_modules/
+
+
 server/secrets.js
+
+
+# lock files
+package-lock.json
+yarn.lock
+client/package-lock.json
+client/yarn.lock
+server/package-lock.json
+server/yarn.lock
+
+# etc
 .DS_Store
+.vscode

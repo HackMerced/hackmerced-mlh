@@ -1,0 +1,23 @@
+{
+  "name": "fullstack_app",
+  "version": "1.0.0",
+  "description": "Pre-registration site",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd server && node server.js\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackMerced/hackmerced-mlh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HackMerced/hackmerced-mlh/issues"
+  },
+  "homepage": "https://github.com/HackMerced/hackmerced-mlh#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
